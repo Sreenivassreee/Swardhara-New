@@ -81,7 +81,7 @@ final List<Widget> imageSliders = imgList
                                 radius: 10,
                                 child: Icon(
                                   Icons.play_arrow,
-                                  color: Colors.black,
+
                                   size: 15,
                                 ),
                                 backgroundColor:Color(0xffe5634d),
@@ -92,8 +92,6 @@ final List<Widget> imageSliders = imgList
                               Text(
                                 'No. ${imgList.indexOf(item)} image',
                                 style: TextStyle(
-
-
                                   fontWeight: FontWeight.bold,
                                 ),
                               ),

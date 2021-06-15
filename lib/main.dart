@@ -51,7 +51,7 @@ class _MyAppState extends State<MyApp> {
                   focusColor:  Color(0xff0B2512),
                   disabledColor: Colors.grey,
                   textSelectionColor:  Colors.white ,
-                  cardColor:  Color(0xFF151515),
+                  cardColor:  Color(0xFF121212),
                   canvasColor:  Colors.black,
                   brightness: Brightness.dark ,
 

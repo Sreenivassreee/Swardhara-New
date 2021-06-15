@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:swardhara_new/Suggested/SuggestedPage.dart';
 
 class LivePerformances extends StatefulWidget {
   const LivePerformances({Key? key}) : super(key: key);
@@ -39,12 +40,12 @@ class _LivePerformancesState extends State<LivePerformances> {
               itemBuilder: (BuildContext context, int index) {
                 return InkWell(
                   onTap: () {
-                    // Navigator.push(
-                    //   context,
-                    //   MaterialPageRoute(
-                    //     builder: (context) => SuggestedPage(),
-                    //   ),
-                    // );
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => SuggestedPage(),
+                      ),
+                    );
                   },
                   child: Padding(
                     padding: const EdgeInsets.all(5.0),

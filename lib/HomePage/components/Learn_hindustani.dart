@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:swardhara_new/DetailedPage/DetailedPage.dart';
 
 
 class LearnHisdustaniMusic extends StatefulWidget {
@@ -56,12 +57,12 @@ class _LearnHisdustaniMusicState extends State<LearnHisdustaniMusic> {
                   child: Card(
                     child: InkWell(
                       onTap: () {
-                        // Navigator.push(
-                        //   context,
-                        //   MaterialPageRoute(
-                        //     builder: (context) => DetailedPage(t: i.toString()),
-                        //   ),
-                        // );
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => DetailedPage(),
+                          ),
+                        );
                       },
                       child: Container(
                         height: 150,

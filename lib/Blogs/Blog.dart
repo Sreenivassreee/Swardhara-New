@@ -21,7 +21,7 @@ class Blogs extends StatelessWidget {
             itemBuilder: (BuildContext context, int i) {
               return Padding(
                 padding:
-                    const EdgeInsets.only(left: 10.0, right: 10, bottom: 10),
+                    const EdgeInsets.only(left: 10.0, right: 10, bottom: 2),
                 child: Card(
                   child: InkWell(
                     onTap: () {
@@ -33,7 +33,7 @@ class Blogs extends StatelessWidget {
                       // );
                     },
                     child: Container(
-                      padding: EdgeInsets.all(5),
+                      padding: EdgeInsets.all(3),
                       height: 100,
                       width: double.infinity,
                       child: Row(
@@ -71,6 +71,7 @@ class Blogs extends StatelessWidget {
                                   ),
                                 ),
                               ),
+                              Spacer(),
                               Padding(
                                 padding: const EdgeInsets.all(8.0),
                                 child: Container(
@@ -79,7 +80,7 @@ class Blogs extends StatelessWidget {
                                   child: Text(
                                     "Alankar - Three Swar ascending and descending ",
                                     style: new TextStyle(
-                                        fontSize: 12.0,   fontFamily: 'Roboto'),
+                                        fontSize: 12.0,   fontFamily: 'Roboto',),
                                   ),
                                 ),
                               ),

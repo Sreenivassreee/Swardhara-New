@@ -77,7 +77,7 @@ class _NavBarState extends State<NavBar> {
       bottomNavigationBar: BottomNavigationBar(
         onTap: onTabTapped,
         currentIndex: _pageIndex,
-
+        // backgroundColor: Color(0xff121212),
         unselectedItemColor: Colors.grey,
         // backgroundColor: Colors.white,
         elevation: 20,
