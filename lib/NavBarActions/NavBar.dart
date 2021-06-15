@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:swardhara_new/HomePage/homepage.dart';
+import 'package:swardhara_new/Profile/Profile.dart';
 
 
 class NavBar extends StatefulWidget {
@@ -31,15 +33,12 @@ class _NavBarState extends State<NavBar> {
   static const TextStyle optionStyle =
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   var _widgetOptions = <Widget>[
-    // HomePage(),
+    HomePage(),
     // Add_products(),
     // Curriculum(),
     // Blogs(),
     // Profile(),
-    Text(
-      'Index 0: Home',
-      style: optionStyle,
-    ),
+
     Text(
       'Index 1: Curriculum',
       style: optionStyle,
@@ -52,6 +51,7 @@ class _NavBarState extends State<NavBar> {
       'Index 3: Settings',
       style: optionStyle,
     ),
+    Profile()
   ];
 
   @override
