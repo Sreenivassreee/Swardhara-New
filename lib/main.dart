@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:swardhara_new/FlashScreen.dart';
 import 'package:swardhara_new/NavBarActions/NavBar.dart';
 
 import 'package:swardhara_new/Themes/Provider.dart';
@@ -57,7 +58,7 @@ class _MyAppState extends State<MyApp> {
 ),
 
               // theme: Styles.themeData(themeChangeProvider.darkTheme, context),
-              home: NavBar(),
+              home: Splash(),
 
               // routes: <String, WidgetBuilder>{
               //   AGENDA: (BuildContext context) => AgendaScreen(),

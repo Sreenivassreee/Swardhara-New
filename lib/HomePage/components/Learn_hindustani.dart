@@ -52,9 +52,8 @@ class _LearnHisdustaniMusicState extends State<LearnHisdustaniMusic> {
               itemBuilder: (context, i) {
                 return Padding(
                   padding:
-                      const EdgeInsets.only(left: 10.0, right: 10, bottom: 10),
-                  child: Hero(
-                    tag: i.toString(),
+                      const EdgeInsets.only(left: 10.0, right: 10, bottom: 5),
+                  child: Card(
                     child: InkWell(
                       onTap: () {
                         // Navigator.push(
@@ -73,7 +72,7 @@ class _LearnHisdustaniMusicState extends State<LearnHisdustaniMusic> {
                           children: [
                             Container(
                               width: 100,
-                              height: 170,
+                              height: 135,
                               child: Image.network(
                                 'https://www.creaticity.co.in/images/eventcity/upcoming/sid-sriram.jpg',
                                 fit: BoxFit.cover,
@@ -84,14 +83,15 @@ class _LearnHisdustaniMusicState extends State<LearnHisdustaniMusic> {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Padding(
-                                  padding: const EdgeInsets.all(8.0),
+                                  padding: const EdgeInsets.only(top: 0.0),
                                   child: Container(
+                                    alignment: Alignment.topCenter,
                                     width:
                                         MediaQuery.of(context).size.width - 150,
                                     child: Text(
                                       "Complementary Volume - Free lessons to experience the learning process",
                                       style: new TextStyle(
-                                        fontFamily: 'Merriweather',
+                                        fontFamily: 'Roboto',
                                         fontWeight: FontWeight.w500,
                                         fontSize: 14.0,
 
@@ -100,7 +100,7 @@ class _LearnHisdustaniMusicState extends State<LearnHisdustaniMusic> {
                                   ),
                                 ),
                                 Padding(
-                                  padding: const EdgeInsets.only(left: 8.0),
+                                  padding: const EdgeInsets.only(left: 0.0),
                                   child: Container(
                                     width:
                                         MediaQuery.of(context).size.width - 150,
@@ -108,7 +108,7 @@ class _LearnHisdustaniMusicState extends State<LearnHisdustaniMusic> {
                                       "Complementary Volume - Free lessons to experience the learning process",
                                       style: new TextStyle(
                                         fontSize: 10.0,
-
+                                        fontFamily: 'Roboto',
                                       ),
                                     ),
                                   ),
@@ -119,7 +119,7 @@ class _LearnHisdustaniMusicState extends State<LearnHisdustaniMusic> {
                                   children: [
                                     Container(
                                       margin: const EdgeInsets.all(5.0),
-                                      padding: const EdgeInsets.all(5.0),
+                                      padding: const EdgeInsets.all(4.0),
                                       decoration: BoxDecoration(
                                         color: Color(0xffe5634d),
 
@@ -129,7 +129,7 @@ class _LearnHisdustaniMusicState extends State<LearnHisdustaniMusic> {
 
                                         ),
                                       ),
-                                      child: Text('Premium',style: TextStyle(color: Colors.white),),
+                                      child: Text('Premium',style: TextStyle(color: Colors.white,                fontFamily: 'Roboto',),),
                                     ),
                                     Padding(
                                       padding:

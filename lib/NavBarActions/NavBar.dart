@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:swardhara_new/Blogs/Blog.dart';
+import 'package:swardhara_new/Curriculum/curriculum.dart';
 import 'package:swardhara_new/HomePage/homepage.dart';
 import 'package:swardhara_new/Profile/Profile.dart';
 
@@ -34,24 +36,24 @@ class _NavBarState extends State<NavBar> {
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   var _widgetOptions = <Widget>[
     HomePage(),
-    // Add_products(),
-    // Curriculum(),
-    // Blogs(),
-    // Profile(),
 
-    Text(
-      'Index 1: Curriculum',
-      style: optionStyle,
-    ),
-    Text(
-      'Index 2: Profile',
-      style: optionStyle,
-    ),
-    Text(
-      'Index 3: Settings',
-      style: optionStyle,
-    ),
-    Profile()
+    Curriculum(),
+    Blogs(),
+    Profile(),
+
+    // Text(
+    //   'Index 1: Curriculum',
+    //   style: optionStyle,
+    // ),
+    // Text(
+    //   'Index 2: Profile',
+    //   style: optionStyle,
+    // ),
+    // Text(
+    //   'Index 3: Settings',
+    //   style: optionStyle,
+    // ),
+    // Profile()
   ];
 
   @override
@@ -77,7 +79,7 @@ class _NavBarState extends State<NavBar> {
         currentIndex: _pageIndex,
 
         unselectedItemColor: Colors.grey,
-        backgroundColor: Colors.white,
+        // backgroundColor: Colors.white,
         elevation: 20,
         selectedItemColor: Colors.deepOrange,
         type: BottomNavigationBarType.fixed,
@@ -99,12 +101,13 @@ class _NavBarState extends State<NavBar> {
               Icons.person,
             ),
             label: 'Profile',
-          ), BottomNavigationBarItem(
-            icon: Icon(
-              Icons.person,
-            ),
-            label: 'Profile',
           ),
+          // BottomNavigationBarItem(
+          //   icon: Icon(
+          //     Icons.person,
+          //   ),
+          //   label: 'Profile',
+          // ),
         ],
         // currentIndex: _selectedIndex,
       ),
