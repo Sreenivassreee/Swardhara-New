@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:swardhara_new/Youtube/Youtube%20Player.dart';
 
 class SuggestedPage extends StatelessWidget {
   SuggestedPage({Key? key}) : super(key: key);
@@ -8,49 +9,55 @@ class SuggestedPage extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            Stack(
-              children: [
-                Container(
-                  height: 250,
-                  width: double.infinity,
-                  child: Hero(
-                    tag: "123",
-                    child: Image.network(
-                      'https://imgmediagumlet.lbb.in/media/2019/01/5c3c6051e54eed62b2154427_1547460689639.jpg?fm=webp&w=750&h=500&dpr=1',
-                      fit: BoxFit.cover,
+            InkWell(
+              onTap: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>YoutubePage('p2lYr3vM_1w')));
+
+              },
+              child: Stack(
+                children: [
+                  Container(
+                    height: 250,
+                    width: double.infinity,
+                    child: Hero(
+                      tag: "123",
+                      child: Image.network(
+                        'https://imgmediagumlet.lbb.in/media/2019/01/5c3c6051e54eed62b2154427_1547460689639.jpg?fm=webp&w=750&h=500&dpr=1',
+                        fit: BoxFit.cover,
+                      ),
                     ),
                   ),
-                ),
-                Positioned(
-                  top: 200,
-                  left: 10,
-                  child: Row(
-                    children: [
-                      CircleAvatar(
-                        radius: 15,
-                        child: Icon(
-                          Icons.play_arrow,
+                  Positioned(
+                    top: 200,
+                    left: 10,
+                    child: Row(
+                      children: [
+                        CircleAvatar(
+                          radius: 15,
+                          child: Icon(
+                            Icons.play_arrow,
+                          ),
+                          backgroundColor: Colors.orange,
                         ),
-                        backgroundColor: Colors.orange,
-                      ),
-                      SizedBox(
-                        width: 15,
-                      ),
-                      Container(
-                        width: MediaQuery.of(context).size.width - 50,
-                        child: Text(
-                          'Lag Ja Gale',
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 20.0,
-                            fontWeight: FontWeight.bold,
+                        SizedBox(
+                          width: 15,
+                        ),
+                        Container(
+                          width: MediaQuery.of(context).size.width - 50,
+                          child: Text(
+                            'Lag Ja Gale',
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 20.0,
+                              fontWeight: FontWeight.bold,
+                            ),
                           ),
                         ),
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
             Container(
               height: 150,
@@ -128,7 +135,10 @@ class SuggestedPage extends StatelessWidget {
                         left: 10.0, right: 10, bottom: 1),
                     child: Card(
                       child: InkWell(
-                        onTap: () {},
+                        onTap: () {
+                          Navigator.push(context, MaterialPageRoute(builder: (context)=>YoutubePage('p2lYr3vM_1w')));
+
+                        },
                         child: Container(
                           width: double.infinity,
                           child: Row(

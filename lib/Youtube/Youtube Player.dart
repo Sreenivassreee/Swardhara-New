@@ -118,13 +118,9 @@ class _YoutubePageState extends State<YoutubePage> {
                 children: [
 
                   FullScreenButton(
-
-
                     controller: _controller,
                     color: Colors.red,
-
                   ),
-
                 ],
               ),
             ),

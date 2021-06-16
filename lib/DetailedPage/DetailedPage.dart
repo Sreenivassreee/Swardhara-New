@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:swardhara_new/Youtube/Youtube%20Player.dart';
 
 class DetailedPage extends StatelessWidget {
 
@@ -10,49 +11,55 @@ class DetailedPage extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            Stack(
-              children: [
-                Container(
-                  height: 250,
-                  width: double.infinity,
-                  child: Image.network(
-                    'https://www.creaticity.co.in/images/eventcity/upcoming/sid-sriram.jpg',
-                    fit: BoxFit.cover,
+            InkWell(
+              onTap: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>YoutubePage('p2lYr3vM_1w')));
+
+              },
+              child: Stack(
+                children: [
+                  Container(
+                    height: 250,
+                    width: double.infinity,
+                    child: Image.network(
+                      'https://www.creaticity.co.in/images/eventcity/upcoming/sid-sriram.jpg',
+                      fit: BoxFit.cover,
+                    ),
                   ),
-                ),
-                Positioned(
-                  top: 200,
-                  left: 10,
-                  child: Row(
-                    children: [
-                      CircleAvatar(
-                        radius: 15,
-                        child: Icon(
-                          Icons.play_arrow,
-
-                        ),
-                        backgroundColor: Colors.orange,
-                      ),
-                      SizedBox(
-                        width: 15,
-                      ),
-                      Container(
-                        width: MediaQuery.of(context).size.width - 65,
-                        child: Text(
-                          'Complementary Volume - Free lessons to experience the learning ',
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontFamily: 'Roboto',
-
-                            fontSize: 15.0,
+                  Positioned(
+                    top: 200,
+                    left: 10,
+                    child: Row(
+                      children: [
+                        CircleAvatar(
+                          radius: 15,
+                          child: Icon(
+                            Icons.play_arrow,
 
                           ),
+                          backgroundColor: Colors.orange,
                         ),
-                      ),
-                    ],
+                        SizedBox(
+                          width: 15,
+                        ),
+                        Container(
+                          width: MediaQuery.of(context).size.width - 65,
+                          child: Text(
+                            'Complementary Volume - Free lessons to experience the learning ',
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontFamily: 'Roboto',
+
+                              fontSize: 15.0,
+
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
             Container(
               height: 150,
@@ -122,6 +129,8 @@ class DetailedPage extends StatelessWidget {
                     child: Card(
                       child: InkWell(
                         onTap: () {
+                          Navigator.push(context, MaterialPageRoute(builder: (context)=>YoutubePage('p2lYr3vM_1w')));
+
                           // Navigator.push(
                           //   context,
                           //   MaterialPageRoute(
