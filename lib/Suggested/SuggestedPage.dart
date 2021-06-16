@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 
 class SuggestedPage extends StatelessWidget {
   SuggestedPage({Key? key}) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -31,7 +30,6 @@ class SuggestedPage extends StatelessWidget {
                         radius: 15,
                         child: Icon(
                           Icons.play_arrow,
-
                         ),
                         backgroundColor: Colors.orange,
                       ),
@@ -97,6 +95,7 @@ class SuggestedPage extends StatelessWidget {
                     ),
                     Divider(
                       height: 10,
+                      color: Colors.deepOrange,
                     )
                   ],
                 ),
@@ -120,7 +119,6 @@ class SuggestedPage extends StatelessWidget {
               child: ListView.builder(
                 shrinkWrap: true,
                 // physics: BouncingScrollPhysics(),
-
                 primary: false,
                 scrollDirection: Axis.vertical,
                 itemCount: 10,
@@ -161,7 +159,6 @@ class SuggestedPage extends StatelessWidget {
                                           fontFamily: 'Roboto',
                                           fontWeight: FontWeight.bold,
                                           fontSize: 14.0,
-
                                         ),
                                       ),
                                     ),
@@ -177,7 +174,6 @@ class SuggestedPage extends StatelessWidget {
                                         style: new TextStyle(
                                           fontSize: 14.0,
                                           fontFamily: 'Roboto',
-                                     
                                         ),
                                       ),
                                     ),
@@ -199,24 +195,6 @@ class SuggestedPage extends StatelessWidget {
                               ),
                             ],
                           ),
-
-                          // child: ListTile(
-                          // title:
-                          // Text(
-                          //     "Complementary Volume - Free lessons to experience the learning process"),
-                          // subtitle: Text("free"),
-                          // leading: Padding(
-                          //   padding: const EdgeInsets.all(5.0),
-                          //   child: Container(
-                          //     height: 200,
-                          //     width: 80,
-                          //     child: Image.network(
-                          //       'https://imgmediagumlet.lbb.in/media/2019/01/5c3c6051e54eed62b2154427_1547460689639.jpg?fm=webp&w=750&h=500&dpr=1',
-                          //       fit: BoxFit.cover,
-                          //     ),
-                          //   ),
-                          // )
-                          // ),
                         ),
                       ),
                     ),

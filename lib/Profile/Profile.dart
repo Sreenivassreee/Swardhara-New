@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:swardhara_new/LoginPage/LoginPage.dart';
 
 class Profile extends StatefulWidget {
   const Profile({Key? key}) : super(key: key);
@@ -17,10 +18,10 @@ class _ProfileState extends State<Profile> {
     super.initState();
 
     if (!auth) {
-      // Timer(Duration(milliseconds: 100), () {
-      //   Navigator.push(
-      //       context, MaterialPageRoute(builder: (context) => LoginPage()));
-      // });
+      Timer(Duration(milliseconds: 100), () {
+        Navigator.push(
+            context, MaterialPageRoute(builder: (context) => LoginPage()));
+      });
     }
   }
 
@@ -31,12 +32,12 @@ class _ProfileState extends State<Profile> {
         padding: const EdgeInsets.all(8.0),
         child: InkWell(
           onTap: () {
-            // Navigator.push(
-            //   context,
-            //   MaterialPageRoute(
-            //     builder: (context) => LoginPage(),
-            //   ),
-            // );
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => LoginPage(),
+              ),
+            );
           },
           child: Container(
             height: 40,

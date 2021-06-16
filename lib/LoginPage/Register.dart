@@ -103,8 +103,7 @@ class _RegisterPageState extends State<RegisterPage> {
                     style: ButtonStyle(
                       foregroundColor:
                           MaterialStateProperty.all<Color>(Colors.white),
-                      backgroundColor:
-                          MaterialStateProperty.all<Color>(Colors.black),
+
                     ),
                     onPressed: () {
                       // Navigator.pushAndRemoveUntil(
@@ -140,8 +139,7 @@ class _RegisterPageState extends State<RegisterPage> {
                     style: ButtonStyle(
                       foregroundColor:
                           MaterialStateProperty.all<Color>(Colors.white),
-                      backgroundColor:
-                          MaterialStateProperty.all<Color>(Colors.black),
+
                     ),
                     onPressed: () {
                       // Navigator.pushAndRemoveUntil(
@@ -168,13 +166,14 @@ class _RegisterPageState extends State<RegisterPage> {
                         MaterialPageRoute(builder: (context) => ContactUs()));
                   },
                   child: Text(
-                    "Click here to Contact for SignUp issues",
+                    "Click here to contact for SignUp issues",
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 17,
                     ),
                   ),
                 ),
+
                 Spacer()
               ],
             ),

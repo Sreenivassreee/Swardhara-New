@@ -77,8 +77,7 @@ class _LoginPageState extends State<LoginPage> {
                     style: ButtonStyle(
                       foregroundColor:
                           MaterialStateProperty.all<Color>(Colors.white),
-                      backgroundColor:
-                          MaterialStateProperty.all<Color>(Colors.black),
+
                     ),
                     onPressed: () {
                       // Navigator.pushAndRemoveUntil(

@@ -45,7 +45,7 @@ class _MyAppState extends State<MyApp> {
                   backgroundColor: Colors.black,
                   indicatorColor:  Color(0xff0E1D36),
                   buttonColor:  Color(0xff3B3B3B) ,
-                  hintColor:  Color(0xff280C0B) ,
+                  hintColor:  Color(0xffffffff) ,
                   highlightColor:  Color(0xff372901),
                   hoverColor:  Color(0xff3A3A3B) ,
                   focusColor:  Color(0xff0B2512),

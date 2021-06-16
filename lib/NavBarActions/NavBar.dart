@@ -3,6 +3,7 @@ import 'package:swardhara_new/Blogs/Blog.dart';
 import 'package:swardhara_new/Curriculum/curriculum.dart';
 import 'package:swardhara_new/HomePage/homepage.dart';
 import 'package:swardhara_new/Profile/Profile.dart';
+import 'package:swardhara_new/Youtube/Youtube%20Player.dart';
 
 
 class NavBar extends StatefulWidget {
@@ -102,12 +103,7 @@ class _NavBarState extends State<NavBar> {
             ),
             label: 'Profile',
           ),
-          // BottomNavigationBarItem(
-          //   icon: Icon(
-          //     Icons.person,
-          //   ),
-          //   label: 'Profile',
-          // ),
+
         ],
         // currentIndex: _selectedIndex,
       ),
