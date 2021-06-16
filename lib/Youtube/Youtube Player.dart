@@ -45,11 +45,12 @@ class _YoutubePageState extends State<YoutubePage> {
       flags: const YoutubePlayerFlags(
         mute: false,
         autoPlay: true,
-        disableDragSeek: false,
+        disableDragSeek: true,
         loop: false,
         isLive: false,
         forceHD: false,
         enableCaption: true,
+
       ),
     )..addListener(listener);
     _idController = TextEditingController();
@@ -70,6 +71,8 @@ class _YoutubePageState extends State<YoutubePage> {
   @override
   void deactivate() {
     // Pauses video while navigating to next page.
+    SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
+
     _controller.pause();
     super.deactivate();
   }

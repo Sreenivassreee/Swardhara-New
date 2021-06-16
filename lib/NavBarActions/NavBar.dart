@@ -1,3 +1,6 @@
+import 'dart:io';
+
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:swardhara_new/Blogs/Blog.dart';
 import 'package:swardhara_new/Curriculum/curriculum.dart';
@@ -34,7 +37,7 @@ class _NavBarState extends State<NavBar> {
   }
 
   static const TextStyle optionStyle =
-      TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
+  TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   var _widgetOptions = <Widget>[
     HomePage(),
 
@@ -65,48 +68,77 @@ class _NavBarState extends State<NavBar> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: PageView(
-          children: _widgetOptions,
-          onPageChanged: onPageChanged,
-          controller: _pageController,
-          physics: new NeverScrollableScrollPhysics()),
-      // Center(
-      //   child:_widgetOptions.elementAt(_selectedIndex),
-      // ),
+    if (!Platform.isIOS) {
+      return CupertinoTabScaffold(
+          tabBar: CupertinoTabBar(items: [
+            BottomNavigationBarItem(
+              icon: Icon(CupertinoIcons.home),),
+            BottomNavigationBarItem(
+              icon: Icon(CupertinoIcons.table),),
+            BottomNavigationBarItem(
+              icon: Icon(CupertinoIcons.book),),
+            BottomNavigationBarItem(
+              icon: Icon(CupertinoIcons.person),)
+          ]),
+          tabBuilder: (context, index) {
+            switch (index) {
+              case 0:
+                return HomePage();
+                break;
+              case 1:
+                return Curriculum();
+                break;
+              case 2:
+                return Blogs();
+                break;
+              default:
+                return Profile();
+                break;
+            }
+          });
+    } else
+      return Scaffold(
+        body: PageView(
+            children: _widgetOptions,
+            onPageChanged: onPageChanged,
+            controller: _pageController,
+            physics: new NeverScrollableScrollPhysics()),
+        // Center(
+        //   child:_widgetOptions.elementAt(_selectedIndex),
+        // ),
 
-      bottomNavigationBar: BottomNavigationBar(
-        onTap: onTabTapped,
-        currentIndex: _pageIndex,
-        // backgroundColor: Color(0xff121212),
-        unselectedItemColor: Colors.grey,
-        // backgroundColor: Colors.white,
-        elevation: 20,
-        selectedItemColor: Colors.deepOrange,
-        type: BottomNavigationBarType.fixed,
-        items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home_rounded),
-            label: 'Home',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.music_note),
-            label: 'Curriculum',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.edit),
-            label: 'Blog',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(
-              Icons.person,
+        bottomNavigationBar: BottomNavigationBar(
+          onTap: onTabTapped,
+          currentIndex: _pageIndex,
+          // backgroundColor: Color(0xff121212),
+          unselectedItemColor: Colors.grey,
+          // backgroundColor: Colors.white,
+          elevation: 20,
+          selectedItemColor: Colors.deepOrange,
+          type: BottomNavigationBarType.fixed,
+          items: const <BottomNavigationBarItem>[
+            BottomNavigationBarItem(
+              icon: Icon(Icons.home_rounded),
+              label: 'Home',
             ),
-            label: 'Profile',
-          ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.music_note),
+              label: 'Curriculum',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.edit),
+              label: 'Blog',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(
+                Icons.person,
+              ),
+              label: 'Profile',
+            ),
 
-        ],
-        // currentIndex: _selectedIndex,
-      ),
-    );
+          ],
+          // currentIndex: _selectedIndex,
+        ),
+      );
   }
 }
