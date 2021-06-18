@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:swardhara_new/Themes/Themes.dart';
+import 'package:swardhara_new/Themes/ThemesPref.dart';
 
-class DarkThemeProvider with ChangeNotifier {
+class   DarkThemeProvider with ChangeNotifier {
   DarkThemePreference darkThemePreference = DarkThemePreference();
-  bool _darkTheme = false;
+  bool  _darkTheme = false;
 
   bool get darkTheme => _darkTheme;
 

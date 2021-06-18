@@ -9,6 +9,7 @@ import 'package:swardhara_new/Themes/ThemeData.dart';
 void main() {
   runApp(MyApp());
 }
+
 class MyApp extends StatefulWidget {
   @override
   _MyAppState createState() => _MyAppState();
@@ -25,46 +26,47 @@ class _MyAppState extends State<MyApp> {
 
   void getCurrentAppTheme() async {
     themeChangeProvider.darkTheme =
-    await themeChangeProvider.darkThemePreference.getTheme();
+        await themeChangeProvider.darkThemePreference.getTheme();
   }
 
   @override
   Widget build(BuildContext context) {
-    return
-      ChangeNotifierProvider(
-        create: (_) {
-          return themeChangeProvider;
+    return ChangeNotifierProvider(
+      create: (_) {
+        return themeChangeProvider;
+      },
+      child: Consumer<DarkThemeProvider>(
+        builder: (BuildContext context, value, Widget? child) {
+          return MaterialApp(
+            debugShowCheckedModeBanner: false,
+            theme: Styles.themeData(themeChangeProvider.darkTheme, context),
+            // ThemeData(
+            //     primarySwatch: Colors.red,
+            //     primaryColor:  Colors.black,
+            //     backgroundColor: Colors.black,
+            //     indicatorColor:  Color(0xff0E1D36),
+            //     buttonColor:  Color(0xff3B3B3B) ,
+            //     hintColor:  Color(0xffffffff) ,
+            //     highlightColor:  Color(0xff372901),
+            //     hoverColor:  Color(0xff3A3A3B) ,
+            //     focusColor:  Color(0xff0B2512),
+            //     disabledColor: Colors.grey,
+            //     textSelectionColor:  Colors.white ,
+            //     cardColor:  Color(0xFF121212),
+            //     canvasColor:  Colors.black,
+            //     brightness: Brightness.dark ,
+
+// ),
+
+            // theme: Styles.themeData(themeChangeProvider.darkTheme, context),
+            home: Splash(),
+
+            // routes: <String, WidgetBuilder>{
+            //   AGENDA: (BuildContext context) => AgendaScreen(),
+            // },
+          );
         },
-        child: Consumer<DarkThemeProvider>(
-          builder: (BuildContext context, value, Widget? child) {
-            return MaterialApp(
-              debugShowCheckedModeBanner: false,
-               theme: ThemeData(
-                  primarySwatch: Colors.red,
-                  primaryColor:  Colors.black,
-                  backgroundColor: Colors.black,
-                  indicatorColor:  Color(0xff0E1D36),
-                  buttonColor:  Color(0xff3B3B3B) ,
-                  hintColor:  Color(0xffffffff) ,
-                  highlightColor:  Color(0xff372901),
-                  hoverColor:  Color(0xff3A3A3B) ,
-                  focusColor:  Color(0xff0B2512),
-                  disabledColor: Colors.grey,
-                  textSelectionColor:  Colors.white ,
-                  cardColor:  Color(0xFF121212),
-                  canvasColor:  Colors.black,
-                  brightness: Brightness.dark ,
-
-),
-
-              // theme: Styles.themeData(themeChangeProvider.darkTheme, context),
-              home: Splash(),
-
-              // routes: <String, WidgetBuilder>{
-              //   AGENDA: (BuildContext context) => AgendaScreen(),
-              // },
-            );
-          },
-        ),);
+      ),
+    );
   }
 }

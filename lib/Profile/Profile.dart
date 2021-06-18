@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:swardhara_new/LoginPage/LoginPage.dart';
+import 'package:swardhara_new/Themes/Provider.dart';
 
 class Profile extends StatefulWidget {
   const Profile({Key? key}) : super(key: key);
@@ -13,6 +14,7 @@ class Profile extends StatefulWidget {
 
 class _ProfileState extends State<Profile> {
   bool auth = true;
+
   @override
   void initState() {
     super.initState();
@@ -27,6 +29,7 @@ class _ProfileState extends State<Profile> {
 
   @override
   Widget build(BuildContext context) {
+    final themeProvider = Provider.of<DarkThemeProvider>(context);
     return Scaffold(
       bottomNavigationBar: Padding(
         padding: const EdgeInsets.all(8.0),
@@ -85,10 +88,27 @@ class _ProfileState extends State<Profile> {
             ),
           ),
           InkWell(
-            onTap: (){
-              // themeChange.darkTheme=true,
+            onTap: () {
+              themeProvider.darkTheme = !themeProvider.darkTheme;
             },
-
+            child: Card(
+              elevation: 2.0,
+              child: ListTile(
+                title: Text("Theme"),
+                subtitle: Text(
+                  !themeProvider.darkTheme ? "Light Theme" : "Dark Theme",
+                ),
+                leading: Icon(
+                  themeProvider.darkTheme ? Icons.dark_mode : Icons.light_mode,
+                  color: Colors.black,
+                ),
+              ),
+            ),
+          ),
+          InkWell(
+            onTap: () {
+              themeProvider.darkTheme = !themeProvider.darkTheme;
+            },
             child: Card(
               elevation: 2.0,
               child: ListTile(
@@ -112,6 +132,11 @@ class _ProfileState extends State<Profile> {
               ),
             ),
           ),
+          // Checkbox(
+          //     value: true,
+          //     onChanged: (b) {
+          //       themeProvider.darkTheme = !themeProvider.darkTheme;
+          //     }),
           Container(
             padding: EdgeInsets.all(10),
             alignment: Alignment.topLeft,
